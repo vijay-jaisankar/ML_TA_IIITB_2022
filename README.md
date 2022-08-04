@@ -3,8 +3,13 @@ This repository contains material relevant to the `AI511 Machine Learning` Cours
 
 ---
 
+## Course Instructors
+- [Prof. Dinesh Babu Jayagopi](https://www.iiitb.ac.in/faculty/dinesh-babu-jayagopi)
+- [Prof. Neelam Sinha](https://www.iiitb.ac.in/faculty/neelam-sinha)
+
+---
+
 ## Teaching Assistants
-The TAs for this course are 
 - [Aniruddh KB](https://github.com/aniruddhkb)
 - [Preyas Garg](https://github.com/preyasgarg)
 - [Vijay Jaisankar](https://github.com/vijay-jaisankar)
