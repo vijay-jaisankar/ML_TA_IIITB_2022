@@ -19,3 +19,10 @@ This repository contains material relevant to the `AI511 Machine Learning` Cours
 - [Adrij Sharma](https://github.com/adrijsharma0408)
 - [Abhigna K L](https://github.com/alpineFrost)
 - [Vaibhavi Lokegaonkar](https://github.com/Vaibhavi1707)
+
+---
+
+## Announcements
+- All official announcements will be made on LMS.
+- Students are encouraged to use Slack as a forum for discussions.
+- Resources will be shared on Slack and will be added to [this repo](https://github.com/zense/helpful-resources) - feel free to make a PR if you wish to share good resources. 
