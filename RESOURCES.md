@@ -1,8 +1,10 @@
 # Resources
 
-- [Luis Serrano - great videos for introduction to ML algorithms](https://www.youtube.com/c/LuisSerrano)
-- [Statquest - the best videos to understand statistical concepts](https://www.youtube.com/c/joshstarmer)
-- [Gilbert Strang - for Linear Algebra](https://www.youtube.com/watch?v=7UJ4CFRGd-U&list=PL221E2BBF13BECF6C)
-- [CS229 Stanford](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU)
-- [Tubingen Machine Learning](https://www.youtube.com/c/T%C3%BCbingenML)
-- [Krish Naik - good hands on videos](https://www.youtube.com/user/krishnaik06)
+- [Luis Serrano - `Introduction to ML algorithms`](https://www.youtube.com/c/LuisSerrano)
+- [Statquest - `Statistical concepts`](https://www.youtube.com/c/joshstarmer)
+- [Gilbert Strang - `Linear algebra`](https://www.youtube.com/watch?v=7UJ4CFRGd-U&list=PL221E2BBF13BECF6C)
+- [CS229 Stanford - `Lectures`](https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU)
+- [Tubingen Machine Learning - `Mathematics for ML + VR`](https://www.youtube.com/c/T%C3%BCbingenML)
+- [Krish Naik - `Hands-on videos`](https://www.youtube.com/user/krishnaik06)
+- [Visually Explained - `Convex optimisation`](https://www.youtube.com/c/BachirElKhadir)
+- [Jeff Heaton - `Deep learning in practice`](https://www.youtube.com/c/HeatonResearch)
