@@ -8,3 +8,5 @@
 - [Krish Naik - `Hands-on videos`](https://www.youtube.com/user/krishnaik06)
 - [Visually Explained - `Convex optimisation`](https://www.youtube.com/c/BachirElKhadir)
 - [Jeff Heaton - `Deep learning in practice`](https://www.youtube.com/c/HeatonResearch)
+- [Computerphile - `Introduction to Data analysis`](https://www.youtube.com/watch?v=NxYEzbbpk-4&list=PLzH6n4zXuckpfMu_4Ff8E7Z1behQks5ba)
+- [Geeksforgeeks - `Blogs about ML`](https://www.geeksforgeeks.org/machine-learning/?ref=shm)
