@@ -26,4 +26,6 @@ This repository contains material relevant to the `AI511 Machine Learning` Cours
 ## Announcements
 - All official announcements will be made on LMS.
 - Students are encouraged to use Slack as a forum for discussions.
-- Resources will be shared on Slack and will be added [here](./RESOURCES.md) - feel free to make a PR if you wish to share good resources. 
+
+## Resources
+Resources will added [here](./RESOURCES.md) - feel free to make a PR if you wish to share good resources. 
