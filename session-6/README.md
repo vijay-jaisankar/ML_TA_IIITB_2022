@@ -1,1 +1,1 @@
-# Decision Tree and Random forest
+# Decision Trees and Random Forest
