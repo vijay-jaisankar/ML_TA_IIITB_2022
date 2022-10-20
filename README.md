@@ -27,5 +27,11 @@ This repository contains material relevant to the `AI511 Machine Learning` Cours
 - All official announcements will be made on LMS.
 - Students are encouraged to use Slack as a forum for discussions.
 
-## Resources
-Resources will added [here](./RESOURCES.md) - feel free to make a PR if you wish to share good resources. 
+## Quick Links
+- Resources will be added [here](./RESOURCES.md)
+- Feel free to [make a PR](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/working-with-your-remote-repository-on-github-or-github-enterprise/creating-an-issue-or-pull-request) if you wish to share good resources or contribute to the repo in any other way.   
+If you have a proposal for the repo or would like to report a bug, please raise an issue. 
+  - Please read the [contributing guidelines](./CONTRIBUTING.md) before creating an issue or a PR.
+- [End-to-end deployment video](https://www.youtube.com/watch?v=4f3Q21dH92Y)
+- Link for [Convex optimisation: task 1](./task-1-convexopt/)
+
