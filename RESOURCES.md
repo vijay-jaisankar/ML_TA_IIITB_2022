@@ -10,3 +10,5 @@
 - [Jeff Heaton - `Deep learning in practice`](https://www.youtube.com/c/HeatonResearch)
 - [Computerphile - `Introduction to Data analysis`](https://www.youtube.com/watch?v=NxYEzbbpk-4&list=PLzH6n4zXuckpfMu_4Ff8E7Z1behQks5ba)
 - [Geeksforgeeks - `Blogs about ML`](https://www.geeksforgeeks.org/machine-learning/?ref=shm)
+- [ISSAI - `Primer on Ensemble methods`](https://www.youtube.com/watch?v=EbYOnORvrio)
+- [GCloud - `Machine Learning on Google Cloud`](https://developers.google.com/learn/topics/datascience)
