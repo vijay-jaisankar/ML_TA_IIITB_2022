@@ -34,5 +34,5 @@ If you have a proposal for the repo or would like to report a bug, please raise 
   - Please read the [contributing guidelines](./CONTRIBUTING.md) before creating an issue or a PR.
 - [End-to-end deployment video](https://www.youtube.com/watch?v=4f3Q21dH92Y)
 - Link for [Convex optimisation: task 1](./task-1-convexopt/)
-- Link for [SVM: task 2](./task-2-svm)
+- Link for [Neural networks: task 2](./task-2-nn)
 
