@@ -1,0 +1,8 @@
+Tasks:
+
+1. Read the dataset 
+2. Understand the dataset
+3. Do any preprocessing (not necessary)
+4. Apply NN using torch and classify
+
+PyTorch: https://pytorch.org/tutorials/beginner/basics/buildmodel_tutorial.html
