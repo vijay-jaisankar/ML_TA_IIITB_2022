@@ -12,3 +12,4 @@
 - [Geeksforgeeks - `Blogs about ML`](https://www.geeksforgeeks.org/machine-learning/?ref=shm)
 - [ISSAI - `Primer on Ensemble methods`](https://www.youtube.com/watch?v=EbYOnORvrio)
 - [GCloud - `Machine Learning on Google Cloud`](https://developers.google.com/learn/topics/datascience)
+- [Valerio Velardo - `Deep Learning and AI in Audio`](https://github.com/musikalkemist)
