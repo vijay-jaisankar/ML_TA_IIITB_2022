@@ -1,0 +1,225 @@
+\documentclass{beamer}
+
+\usepackage{soul}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {./} }
+
+
+
+\usetheme{Warsaw}
+
+
+\title[ML]{Regularised Regression}
+\author{Vijay Jaisankar}
+\institute{Teaching Assistant}
+\date{\href{https://www.youtube.com/watch?v=dQw4w9WgXcQ}{Made these slides with this song on repeat}}
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+\begin{frame}
+    Agenda  
+    \begin{itemize}
+        \item Overview of Linear Regression
+        \item Overfitting and underfitting
+        \item Regularisation
+        \item Ridge regression and Lasso regression
+        \item Elastic-Net
+        \item Some practical things to keep in mind
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    Linear Regression : Matrix Form
+    \\
+    \\ 
+    \\
+    Credits: \href{https://dkobak.github.io/}{Dmitry Kobak}
+\end{frame}
+
+\begin{frame}{Linear Regression - Problem Statement}
+\includegraphics[scale=0.5]{pic1.png}
+\end{frame}
+
+\begin{frame}{Linear Regression - Making predictions}
+    \includegraphics[scale=0.5]{pic2.png}
+\end{frame}
+
+\begin{frame}{Linear Regression - Loss Function}
+    \includegraphics[scale=0.5]{pic3.png}
+\end{frame}
+
+\begin{frame}{Linear Regression - Gradient}
+    \includegraphics[scale=0.5]{pic4.png}
+\end{frame}
+
+\begin{frame}{Gradient Descent - Essence}
+    \begin{itemize}
+        \item Output
+        \item Costs 
+        \item Update Weights
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{}
+    Overfitting and underfitting
+\end{frame}
+
+
+
+\begin{frame}{The importance of test data}
+    \begin{itemize}
+        \item Why not use $100\%$ of the data provided to make the model? 
+        \item What purpose does the test data have?
+    \end{itemize}
+    
+\end{frame}
+
+
+\begin{frame}{The importance of letting the model converge}
+    \includegraphics[scale=0.20]{pic5.png}
+
+    \textbf{Do you see anything wrong with this?}
+
+\end{frame}
+
+\begin{frame}{Can something be too complex for its own good?}
+    \begin{itemize}
+        \item Can a model be too good to be true? 
+        \item Is the data exhaustive?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Putting it all together}
+\begin{itemize}
+    \item Overfitting \textit{("mugged up the data")}
+    \item Underfitting \textit{("forgot to study")}
+    \item Bias-Variance trade-off
+    
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+    Case Study 
+    \\ 
+    \\ 
+    \\ 
+    Credits: \textit{Pattern Recognition and Machine Learning} by Christopher Bishop
+\end{frame}
+
+
+\begin{frame}{Taylor's Theorem}
+    \begin{itemize}
+        \item How can we represent $f(x)$ = $sin(a \cdot x)$ as a weighted sum of polynomials? \textit{Hint: What is the title of this slide?}
+        \item Do you see how we can model this as an instance of \textit{Polynomial Regression?}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Fitting various Polynomials}
+\includegraphics[scale=0.5]{pic6.png}
+\end{frame}
+
+\begin{frame}{The issue with large coefficients}
+    \includegraphics[scale=0.4]{pic7.jpg}
+\end{frame}
+
+\begin{frame}{The issue with large coefficients}
+    But, \textit{why} are large parameters so bad?
+    \begin{itemize}
+        \item Numerical issues - overflows and such 
+        \item The more pertinent issue - how does a small change in $x$ affect $1061800 \cdot x^6$ as opposed to $4.5 \cdot x^6$?
+        \item Given that $\beta$ represents slope, how important is it that the data does not deviate too much from its initial shape?
+        \item \textbf{The big if} - What if the testing data deviates even slightly as compared to the training data? How do the values of $\beta$ affect this loss?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Regularisation - Essence}
+    \includegraphics[scale=0.4]{pic8.jpg}
+\end{frame}
+
+\begin{frame}
+    Regularisation
+\end{frame}
+
+\begin{frame}{Regularisation - Definition}
+    \begin{itemize}
+        \item Regularisations are techniques used to reduce the error by fitting a function appropriately on the given training set and avoid overfitting.
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    Ridge and Lasso Regression
+\end{frame}
+
+\begin{frame}{Regularisation - new loss function}
+    \includegraphics[scale=0.5]{pic9.png}
+\end{frame}
+
+\begin{frame}{Ridge Regression}
+        \includegraphics[scale=0.5]{pic10.png}
+\end{frame}
+
+\begin{frame}{Thought Experiment}
+    \begin{itemize}
+        \item What if $\lambda$ $->$ $\infty$?
+        \item What would that make $\beta$?
+        \item Is this valid (if we had, say, one point or M = 1?)
+    \end{itemize}  
+\end{frame}
+
+\begin{frame}{Lasso Regression}
+    \includegraphics[scale=0.5]{pic11.png}
+\end{frame}
+
+\begin{frame}{Comparison between Lasso and Ridge Regression}
+\begin{itemize}
+    \item L1 regularisation cares equally about \textbf{driving down big weights to small weights}, or \textbf{driving small weights to zeros}. If you have a lot of features, and you suspect that not all of them are that important, start with Lasso.
+    \item L2 regularisation cares more about \textbf{driving big weight to small weights}. If you only have a few features, and you are confident that all of them should be really relevant for predictions, start with Ridge.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Putting it all together}
+    \begin{itemize}
+        \item Regularisation: Help solve overfitting by employing a smarter approach
+        \item Ridge: "Force push"
+        \item Lasso: "Coerce"
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{ElasticNet}
+    \includegraphics[scale=0.5]{pic12.jpg}
+\end{frame}
+
+\begin{frame}{ElasticNet - Intuition}
+    Linear combination of \textbf{both} penalty terms.
+\end{frame}
+
+\begin{frame}{}
+    Important stuff ahead!
+\end{frame}
+
+\begin{frame}{Miscellaneous Points}
+\begin{itemize}
+    \item Validation Set
+    \item \textit{GridSearch}
+    \item Choosing $\lambda$
+    \item Regularisation for Classification
+    \item Data transforms
+\end{itemize}
+    
+\end{frame}
+
+
+\begin{frame}
+    Thank you
+\end{frame}
+\end{document}
