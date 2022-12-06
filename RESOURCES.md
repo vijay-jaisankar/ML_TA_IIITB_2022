@@ -14,3 +14,4 @@
 - [GCloud - `Machine Learning on Google Cloud`](https://developers.google.com/learn/topics/datascience)
 - [Valerio Velardo - `Deep Learning and AI in Audio`](https://github.com/musikalkemist)
 - [Coding Lane - `Derivations and Mathematics`](https://www.youtube.com/watch?v=URJ9pP1aURo)
+- [m2cgen - `Convert your models into native code`](https://github.com/BayesWitnesses/m2cgen)
