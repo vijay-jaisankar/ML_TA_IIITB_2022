@@ -13,3 +13,4 @@
 - [ISSAI - `Primer on Ensemble methods`](https://www.youtube.com/watch?v=EbYOnORvrio)
 - [GCloud - `Machine Learning on Google Cloud`](https://developers.google.com/learn/topics/datascience)
 - [Valerio Velardo - `Deep Learning and AI in Audio`](https://github.com/musikalkemist)
+- [Coding Lane - `Derivations and Mathematics`](https://www.youtube.com/watch?v=URJ9pP1aURo)
