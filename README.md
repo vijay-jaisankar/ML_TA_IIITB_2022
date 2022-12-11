@@ -36,3 +36,14 @@ If you have a proposal for the repo or would like to report a bug, please raise 
 - Link for [Convex optimisation: task 1](./task-1-convexopt/)
 - Link for [Neural networks: task 2](./task-2-nn)
 
+## Sessions' Files
+- [Introduction to machine learning, pandas, numpy, and linear regression](./session-1-intro-to-ml-pandas-numpy/)
+- [Preprocessing and data wrangling](./session-2-preprocessing-data/)
+- [Gaussians, logistic regression, and naive bayes](./session-3-gaussians-logistic-regression-naive-bayes/)
+- [Kmeans clustering and principal component analysis](./session-4-kmeans-pca/)
+- [Regularised regression and cross validation](./session-5-regularisation-cross-validation/)
+- [Decision trees and random forests](./session-6-decision-trees-random-forest/)
+- [Xgboost and end-to-end model deployment](./session-7-deployment-xgboost/)
+- [Convex optimisation and KKT conditions](./session-8-convex-optimisation/)
+- [Support vector machines](./session-9-support-vector-machines/)
+- [Introduction to neural networks and backpropagation](./session-10-intro-to-neural-networks/)
