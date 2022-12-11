@@ -10,16 +10,16 @@ This repository contains material relevant to the `AI511 Machine Learning` Cours
 ---
 
 ## Teaching Assistants
-- [Aniruddh KB](https://github.com/aniruddhkb)
-- [Preyas Garg](https://github.com/preyasgarg)
-- [Harshita Soni](https://github.com/soni-H)
-- [Vijay Jaisankar](https://github.com/vijay-jaisankar)
-- [Debmalya Sen](https://github.com/DEBMALYASEN)
-- [Nikhil Agarwal](https://github.com/nikhil0360)
-- [Venkat S Bitra](https://github.com/VenkatSBitra)
-- [Adrij Sharma](https://github.com/adrijsharma0408)
 - [Abhigna K L](https://github.com/alpineFrost)
+- [Adrij Sharma](https://github.com/adrijsharma0408)
+- [Aniruddh KB](https://github.com/aniruddhkb)
+- [Debmalya Sen](https://github.com/DEBMALYASEN)
+- [Harshita Soni](https://github.com/soni-H)
+- [Nikhil Agarwal](https://github.com/nikhil0360)
+- [Preyas Garg](https://github.com/preyasgarg)
 - [Vaibhavi Lokegaonkar](https://github.com/Vaibhavi1707)
+- [Venkat S Bitra](https://github.com/VenkatSBitra)
+- [Vijay Jaisankar](https://github.com/vijay-jaisankar)
 
 ---
 
