@@ -1,0 +1,275 @@
+\documentclass{beamer}
+
+\usepackage{soul}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{ {./} }
+
+
+
+\usetheme{Warsaw}
+
+
+\title[ML]{Gaussians, Logistic Regression, and Naive Bayes}
+\author{Vijay Jaisankar}
+\institute{Teaching Assistant}
+\date{May or may not have made these slides at 3 AM}
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+
+\begin{frame}
+    Agenda  
+    \begin{itemize}
+        \item Revision of last class
+        \item Introduction to classifiers
+        \item The Gaussian function
+        \item Maximum likelihood estimation (MLE)
+        \item Bayes' theorem and the Naive Bayes classifier
+        \item Non-linearity and the Logistic regression algorithm
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    Recap of last class
+\end{frame}
+
+\begin{frame}{The components of an ML system}
+    \begin{itemize}
+        \item Tasks == Problems you wish to apply Machine Learning on; clear
+declaration and definition of inputs and outputs
+        \item Models == Algorithms run on data that generate insights
+        \item Features == Filtered and Processed Inputs
+        \item Datasets == “Raw” Data
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Linear Regression - Essence}
+\includegraphics[scale=0.2]{pic2.png}
+\end{frame}
+
+\begin{frame}{Gradient Descent - Essence}
+    \begin{itemize}
+        \item Output
+        \item Costs 
+        \item Update Weights
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Gradient Descent - Algorithm}
+\includegraphics[scale=0.5]{pic1.png}
+\end{frame}
+
+\begin{frame}{}
+    Introduction to classifiers
+\end{frame}
+
+
+
+\begin{frame}{Classification}
+\begin{itemize}
+    \item (Mostly) supervised setting
+    \item Features == Inputs
+    \item Labels == Outputs
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Noob Classifier}
+    \includegraphics[scale=0.25]{pic3.png}
+
+    \textbf{Do you see anything wrong with this?}
+
+\end{frame}
+
+\begin{frame}{Things are rarely uniform!}
+    \begin{itemize}
+        \item This can perform crazily well in certain cases! 
+        \item But, we can all agree that this might not be a good idea. \textit{Why?}
+        \item Does not scale well - \textbf{Under-fitting}
+        \item To create more of an even class distribution, we perform \textit{Over-sampling} or \textit{Under-sampling} or more specific \textit{Hyperparameter tuning}.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    Gaussians
+\end{frame}
+
+\begin{frame}{Gaussians are everywhere!}
+    There are three things in IIITB that you will always encounter:
+    \begin{itemize}
+        \item Assignments
+        \item The appearance of Gaussians in your problems
+        \item Caches and parallelism
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Gaussian - Diagram}
+\includegraphics[scale=0.3]{pic4.png}
+\end{frame}
+
+\begin{frame}{Gaussian curve - Essence}
+    Let's look at the curve again
+    \begin{itemize}
+        \item There appears to be a "center point" 
+        \item The values seem to spread out 
+        \item The "heights" of the values that are far away from the center point are lower
+        \item \textbf{Relative Spread} - if a random value is extracted from a sample that follows this curve, there is \textit{high probability} that it belongs to the "middle band". \textit{Just how probable? Look at the equation!}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Fitting a Gaussian - Essence}
+    If we can safely predict that the input data follows a Gaussian curve, what parameters do we need to define the data?
+    \begin{itemize}
+        \item All the input points? 
+        \item The corresponding $\mu$ and $\sigma$ values?
+    \end{itemize}
+    
+    \textbf{We can represent the data with only the Gaussian Parameters! $\rightarrow$ Saves data}
+\end{frame}
+
+\begin{frame}{Fitting a Gaussian - The big question}
+    Okay, so we've decided to reduce our data into a Gaussian. \\ \\ \\
+    What do we need to represent it? $\mu$ and $\sigma$ \\ \\ \\
+    How do we \textit{estimate} these parameters?
+\end{frame}
+
+\begin{frame}{Parameter estimation - the big idea}
+    \begin{itemize}
+        \item For any candidate parameter, we can associate a \textbf{Likelihood function} - "support" provided by the input data for the given parameter
+        \item In more technical term, the Likelihood function is a \textbf{Joint PMF/PDF}.
+        \item So, to find the "right" parameter, it needs to be a \textbf{maxima} of the Likelihood function. \textit{Have we done this before?}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    Maximum Likelihood Estimation
+\end{frame}
+
+\begin{frame}{Why log?}
+    Which one is easier to differentiate?
+    \begin{itemize}
+        \item $f_1(x) \cdot f_2(x) \cdot f_3(x) \cdot ...$
+        \item $f_1(x) + f_2(x) + f_3(x) + ...$
+    \end{itemize}
+    
+    \vspace{15pt}
+    
+    Also, $log(f_1(x) \cdot f_2(x) \cdot f_3(x) \cdot ...)$ = $log (f_1(x)) + log (f_2(x)) + log (f_3(x)) + ...$
+    
+    \vspace{10pt}
+    
+    Note: Perform these stunts under the supervision of Convex functions.
+\end{frame}
+
+\begin{frame}{Univariate Gaussian MLE - Results}
+    \includegraphics[scale=0.5]{pic5.png}
+\end{frame}
+
+\begin{frame}{MLE - Recap of Steps}
+\begin{itemize}
+    \item Write a Likelihood function of inputs and parameters ($L$)
+    \item Under suitable assumptions, take its logarithm ($l$)
+    \item Under suitable conditions, solve for the \textbf{parameter with maximum likelihood} (\textit{Differentiate and equate to 0}) $\rightarrow$ Best $\theta$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MLE - Walkthrough}
+    \href{https://statproofbook.github.io/P/ug-mle}{Univariate Gaussian: Link}
+\end{frame}
+
+\begin{frame}
+    Naive Bayes Classifier
+\end{frame}
+
+\begin{frame}{Recap - Problem Setting}
+    \begin{itemize}
+        \item Input vector \textbf{$x$}
+        \item Set of $K$ classes $C_1, ..., C_K$
+        \item We need to find $k$ where $p(C_k | \textbf{x})$ is maximised (\textit{Class $k$ has the highest probability of accommodating $x$})
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Gaussian Naive Bayes: Setting the stage}
+    \begin{itemize}
+        \item Let's assume that all features are independent of each other.
+        \item Let's assume that each feature follows a Gaussian Distribution.
+        \item The result? From our previous work, we now have a way of calculating $p(\textbf{x} | C_k)$!
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Gaussian Naive Bayes: Putting it all together}
+    \includegraphics[scale=0.25]{pic6.jpeg}
+\end{frame}
+
+\begin{frame}{Gaussian Naive Bayes: Pop Quiz!}
+\begin{itemize}
+    \item If we have all $p(C_k | \textbf{x})$s, how do we find the right $k$ for $\textbf{x}$? \textbf{Ans: \textit{argmax}}
+    \item Why don't we need to compute $p(data)$? \textbf{Ans: It's just a proportionality constant and is positive.}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Generalising this model}
+\begin{itemize}
+    \item Can the input features come from other distributions? 
+    \item What if the features are not independent?
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+    Logistic Regression
+\end{frame}
+
+\begin{frame}{Why not use Linear Regression?}
+    \includegraphics[scale=0.5]{pic7.png}
+\end{frame}
+
+\begin{frame}{Adding non-linearity: The sigmoid function}
+    \includegraphics[scale=0.75]{pic8.png}
+\end{frame}
+
+\begin{frame}{Logistic Regression - Essence}
+\begin{itemize}
+    \item Much like Linear regression, we learn a line.
+    \item We feed this line into the sigmoid function to get a value between 0 and 1.
+    \item We then threshold this value to a particular class (0 or 1).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Logistic Regression - Essence}
+    \includegraphics[scale=0.8]{pic9.png}
+\end{frame}
+
+\begin{frame}{Generative and Discriminative models}
+    \textbf{How does this approach differ from the Naive Bayes model we just saw?} Ans: We're calculating $p(y|x)$ directly!
+\end{frame}
+
+\begin{frame}{MLE for Binary Classification}
+    \includegraphics[scale=0.25]{pic10.png}
+\end{frame}
+
+\begin{frame}{Loss Function for Binary Classification}
+        \includegraphics[scale=0.4]{pic11.png}
+\end{frame}
+
+\begin{frame}{Logistic Regression : Summary}
+\begin{itemize}
+    \item Sigmoid == Probability of Class "1"
+    \item MLE through Bernoullian analysis
+    \item Gradient Ascent Algorithm by taking the gradient of the loss
+\end{itemize}
+    
+\end{frame}
+
+
+\begin{frame}
+    Thank you
+\end{frame}
+\end{document}
