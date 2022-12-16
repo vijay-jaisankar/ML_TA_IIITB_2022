@@ -16,3 +16,4 @@
 - [Coding Lane - `Derivations and Mathematics`](https://www.youtube.com/watch?v=URJ9pP1aURo)
 - [m2cgen - `Convert your models into native code`](https://github.com/BayesWitnesses/m2cgen)
 - [pandarallel - `Parallelise your pandas operations`](https://github.com/nalepae/pandarallel)
+- [Eddie Jaoude - `TensorflowJS - project walkthrough`](https://www.youtube.com/watch?v=y9lWlm0Z2Nw)
