@@ -35,6 +35,7 @@ If you have a proposal for the repo or would like to report a bug, please raise 
 - Link for [End-to-end deployment video](https://www.youtube.com/watch?v=4f3Q21dH92Y)
 - Link for [Convex optimisation: task 1](./task-1-convexopt/)
 - Link for [Neural networks: task 2](./task-2-nn)
+- [Practice questions](./practice-questions) pertaining to various topics
 - (Rather lengthy) [project](https://www.kaggle.com/competitions/ai511-homeloan-2022/overview) for practice and various [approaches](./task-3-project) for this task.
 
 ## Sessions' Files
